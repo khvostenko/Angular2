@@ -1,0 +1,22 @@
+﻿<h1>Users</h1>
+<p *ngIf="!persons"><em>Loading...</em></p>
+<table class='table' *ngIf="persons">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Full name</th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let person of persons">
+            <td>{{ person.Email }}</td>
+            <td>{{ person.Name }}</td>
+            <td><button type="button" style="width:140px;" class="btn btn-primary btn-margin-5" [routerLink]="['personEdit', person.Id]" disabled>Редагувати</button></td>
+            <td><button type="button" style="width:140px;" class="btn btn-primary btn-margin-5" (click)="Delete(person.Id)">Delete</button></td>
+            <td><button type="button" style="width:140px;" class="btn btn-primary btn-margin-5" [routerLink]="['../person-details',person.Id]">Показати деталі</button></td>
+        </tr>
+    </tbody>
+</table>

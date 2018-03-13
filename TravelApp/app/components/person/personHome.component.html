@@ -1,0 +1,26 @@
+﻿
+<nav class="navbar">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li><button type="button" class="btn btn-primary btn-margin-2" [routerLink]="['info']">Personal information</button></li>
+            <li><button type="button" class="btn btn-primary btn-margin-2" [routerLink]="['addcitywhichiwant']">Add city which I want to visit</button></li>
+            <li><button type="button" class="btn btn-primary btn-margin-2" [routerLink]="['addcitywhichivisited']">Add city which I visited</button></li>
+            <li><button type="button" class="btn btn-primary btn-margin-2" [routerLink]="['citieswhichivisited']">Cities which I visited</button></li>
+            <li><button type="button" class="btn btn-primary btn-margin-2" [routerLink]="['citieswhichiwant']">Cities which I want to visit</button></li>
+            <li><button type="button" class="btn btn-primary btn-margin-2" [routerLink]="['photos']">My photos</button></li>
+            <li><button type="button" class="btn btn-primary btn-margin-2" [routerLink]="['comments']">My comments</button></li>
+
+            <!--<button type="button" class="btn btn-primary btn-margin-2" [routerLink]="['room']">Моя кімната</button>
+            <button type="button" class="btn btn-primary btn-margin-2" [routerLink]="['feedbackAdd']">Написати скаргу чи пропозицію</button>
+            <button type="button" class="btn btn-primary btn-margin-2" [routerLink]="['studentCategories']">Категорії студентів</button>
+            <button type="button" class="btn btn-primary btn-margin-2" [routerLink]="['dormitoryRequest']">Подати заявку на поселення</button>-->
+        </ul>
+    </div>
+</nav>
+<div class="row">
+    <div class="col-sm-12 bs-callout bs-callout-info">
+        <div>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

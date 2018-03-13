@@ -1,0 +1,20 @@
+﻿<h1>Admins</h1>
+<p *ngIf="!administrators"><em>Loading...</em></p>
+<button type="button" style="width:100px;" class="btn btn-primary btn-margin-5" [routerLink]="['../addAdmin']">Add</button>
+<table class='table' *ngIf="administrators">
+    <thead>
+        <tr>
+            <th>Full name</th>
+            <th>Email</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let administrator of administrators">
+            <td>{{ administrator.Name }}</td>
+            <td>{{ administrator.Email }}</td>
+            <td><button type="button" style="width:140px;" class="btn btn-primary btn-margin-5" [routerLink]="['../adminEdit',administrator.Id]">Редагувати</button></td>
+            <td><button (click)="Delete(administrator.Id)" class="btn btn-danger">Delete</button></td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,24 @@
+﻿
+<nav class="navbar">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li><button type="button" class="btn btn-primary btn-margin-2" [routerLink]="['administrators']">Admins</button></li>
+            <li><button type="button" class="btn btn-primary btn-margin-2" [routerLink]="['info']">Personal info</button></li>
+            <li><button type="button" class="btn btn-primary btn-margin-2" [routerLink]="['addAdmin']">Admin register</button></li>
+            <li><button type="button" class="btn btn-primary btn-margin-2" [routerLink]="['persons']">Users</button></li>
+            <!--<button type="button" class="btn btn-primary btn-margin-2" [routerLink]="['dormitories']">Гуртожитки</button>
+            <button type="button" class="btn btn-primary btn-margin-2" [routerLink]="['faculties']">Факультети</button>
+            <button type="button" class="btn btn-primary btn-margin-2" [routerLink]="['groups']">Групи</button>
+            <button type="button" class="btn btn-primary btn-margin-2" [routerLink]="['studentCategories']">Категорії студентів</button>
+            
+            <button type="button" class="btn btn-primary btn-margin-2" [routerLink]="['feedbacks']">Скарги та пропозиції</button>-->
+        </ul>
+    </div>
+</nav>
+<div class="row">
+    <div class="col-sm-12 bs-callout bs-callout-info">
+        <div>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

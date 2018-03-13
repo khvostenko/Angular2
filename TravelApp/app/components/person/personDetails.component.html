@@ -1,0 +1,7 @@
+﻿<h1>Personal info</h1>
+<p *ngIf="!person"><em>Loading...</em></p>
+<div *ngIf="person">
+    <p><strong>Email</strong> : {{ person.Email }}</p>
+    <p><strong>Full name</strong> : {{ person.Name }}</p>
+
+</div>
